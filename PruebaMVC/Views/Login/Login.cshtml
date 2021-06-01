@@ -1,0 +1,29 @@
+﻿@model PruebaMVC.Models.ViewModels.Login
+
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_LayoutLogin.cshtml";
+}
+@*@using (Html.BeginForm("Login", "Login", FormMethod.Post))
+{*@
+    <div class="header">Iniciar Sesión</div>
+    <form id="form1" action="Verify" method="post">
+        <div class="body bg-gray">
+            <div>
+                @Html.LabelFor(d => d._Correo)
+                @Html.TextBoxFor(d => d._Correo, "", new { @class = "form-control" })
+                @Html.ValidationMessageFor(d => d._Correo, null, new { @class = "red" })
+            </div>
+            <div>
+                @Html.LabelFor(d => d._Contrasena)
+                @Html.TextBoxFor(d => d._Contrasena, "", new { @class = "form-control" })
+                @Html.ValidationMessageFor(d => d._Contrasena, null, new { @class = "red" })
+            </div>
+        </div>
+        <div class="footer" style="text-align:right">
+            <input value="Ingresar" type="submit" class="btn btn-primary" />
+        </div>
+    </form>
+@*}*@
+
+

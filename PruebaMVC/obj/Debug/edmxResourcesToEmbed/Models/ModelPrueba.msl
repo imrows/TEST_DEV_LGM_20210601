@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PRUEBAModelStoreContainer" CdmEntityContainer="PRUEBAEntities">
+    <EntitySetMapping Name="Tb_PersonasFisicas">
+      <EntityTypeMapping TypeName="PRUEBAModel.Tb_PersonasFisicas">
+        <MappingFragment StoreEntitySet="Tb_PersonasFisicas">
+          <ScalarProperty Name="IdPersonaFisica" ColumnName="IdPersonaFisica" />
+          <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
+          <ScalarProperty Name="FechaActualizacion" ColumnName="FechaActualizacion" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="ApellidoPaterno" ColumnName="ApellidoPaterno" />
+          <ScalarProperty Name="ApellidoMaterno" ColumnName="ApellidoMaterno" />
+          <ScalarProperty Name="RFC" ColumnName="RFC" />
+          <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
+          <ScalarProperty Name="UsuarioAgrega" ColumnName="UsuarioAgrega" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_ActualizarPersonaFisica" FunctionName="PRUEBAModel.Store.sp_ActualizarPersonaFisica">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PRUEBAModel.sp_ActualizarPersonaFisica_Result">
+          <ScalarProperty Name="ERROR" ColumnName="ERROR" />
+          <ScalarProperty Name="MENSAJEERROR" ColumnName="MENSAJEERROR" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_AgregarPersonaFisica" FunctionName="PRUEBAModel.Store.sp_AgregarPersonaFisica">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PRUEBAModel.sp_AgregarPersonaFisica_Result">
+          <ScalarProperty Name="ERROR" ColumnName="ERROR" />
+          <ScalarProperty Name="MENSAJEERROR" ColumnName="MENSAJEERROR" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_EliminarPersonaFisica" FunctionName="PRUEBAModel.Store.sp_EliminarPersonaFisica">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PRUEBAModel.sp_EliminarPersonaFisica_Result">
+          <ScalarProperty Name="ERROR" ColumnName="ERROR" />
+          <ScalarProperty Name="MENSAJEERROR" ColumnName="MENSAJEERROR" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="Login">
+      <EntityTypeMapping TypeName="PRUEBAModel.Login">
+        <MappingFragment StoreEntitySet="Login">
+          <ScalarProperty Name="CveContrs" ColumnName="CveContrs" />
+          <ScalarProperty Name="Contrasena" ColumnName="Contrasena" />
+          <ScalarProperty Name="Correo" ColumnName="Correo" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

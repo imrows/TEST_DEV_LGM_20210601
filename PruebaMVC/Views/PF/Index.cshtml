@@ -1,0 +1,49 @@
+﻿@model List<PruebaMVC.Models.ViewModels.ListTablaPF>
+                                        
+@{ ViewBag.Title = "Personas Físicas"; }
+
+<h2>@ViewBag.Title</h2>
+
+<div class="row" style="text-align:right;padding:5px;">
+    <a href="~/PF/Nuevo" class="btn btn-primary">Nuevo</a>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <table class="table">
+            <tr>
+                <th> ID </th>
+                <th> Registro </th>
+                <th> Actualización </th>
+                <th> Nombre </th>
+                <th> Ap Paterno </th>
+                <th> Ap Materno </th>
+                <th> RFC </th>
+                <th> Nacimiento </th>
+                <th> Usuario Add </th>
+                <th> Activo </th>
+                <th></th>
+            </tr>
+            @foreach(var oElem in Model)
+            {
+                <tr>
+                    <td> @oElem._Id </td>
+                    <td> @oElem._FechaRegistro </td>
+                    <td> @oElem._FechaActualizacion </td>
+                    <td> @oElem._Nombre </td>
+                    <td> @oElem._ApellidoPaterno </td>
+                    <td> @oElem._ApellidoMaterno </td>
+                    <td> @oElem._RFC </td>
+                    <td> @oElem._FechaNacimiento </td>
+                    <td> @oElem._UsuarioAgrega </td>
+                    <td> @oElem._Activo </td>
+                    <td>
+                        <a class="btn btn-default" href="~/PF/Editar/@oElem._Id">Editar</a>
+                        <a class="btn btn-danger" href="~/PF/Eliminar/@oElem._Id">Eliminar</a>
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>
+

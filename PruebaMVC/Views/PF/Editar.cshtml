@@ -1,0 +1,62 @@
+﻿@model PruebaMVC.Models.ViewModels.TablaPF
+
+@{
+    ViewBag.Title = "Nuevo";
+}
+
+<h2>@ViewBag.Title</h2>
+
+@using (Html.BeginForm("Editar", "PF", FormMethod.Post))
+{
+    <div class="row">
+        <div class="col-md-6">
+            @Html.HiddenFor(d=>d._Id)
+            <div>
+                @Html.LabelFor(d => d._Nombre)
+                @Html.TextBoxFor(d => d._Nombre, "", new { @class = "form-control" })
+                @Html.ValidationMessageFor(d => d._Nombre, null, new { @class = "red" })
+            </div>
+            <div>
+                @Html.LabelFor(d => d._ApellidoPaterno)
+                @Html.TextBoxFor(d => d._ApellidoPaterno, "", new { @class = "form-control" })
+                @Html.ValidationMessageFor(d => d._ApellidoPaterno, null, new { @class = "red" })
+            </div>
+            <div>
+                @Html.LabelFor(d => d._ApellidoMaterno)
+                @Html.TextBoxFor(d => d._ApellidoMaterno, "", new { @class = "form-control" })
+            </div>
+            <div>
+                @Html.LabelFor(d => d._RFC)
+                @Html.TextBoxFor(d => d._RFC, "", new { @class = "form-control" })
+                @Html.ValidationMessageFor(d => d._RFC, null, new { @class = "red" })
+            </div>
+            <div>
+                @Html.LabelFor(d => d._FechaNacimiento) <br />
+                @Html.EditorFor(d => d._FechaNacimiento, "", new { @class = "form-control" })
+                @Html.ValidationMessageFor(d => d._FechaNacimiento, null, new { @class = "red" })
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div>
+                @Html.LabelFor(d => d._UsuarioAgrega)
+                @Html.TextBoxFor(d => d._UsuarioAgrega, "", new { @class = "form-control" })
+            </div>
+            <div>
+                @Html.LabelFor(d => d._Activo)
+                @Html.TextBoxFor(d => d._Activo, "", new { @class = "form-control" })
+            </div>
+            <div>
+                @Html.LabelFor(d => d._FechaRegistro) <br />
+                @Html.EditorFor(d => d._FechaRegistro, "", new { @class = "form-control" }) <br />
+            </div>
+            <div>
+                @Html.LabelFor(d => d._FechaActualizacion) <br />
+                @Html.EditorFor(d => d._FechaActualizacion, "", new { @class = "form-control" }) <br />
+            </div>
+
+            <div style="text-align:right">
+                <input value="Guardar" type="submit" class="btn btn-primary" />
+            </div>
+        </div>
+    </div>
+}
